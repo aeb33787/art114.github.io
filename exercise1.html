@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+<style>
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 50px;
+    }
+    .change-state1 {
+        color: green;
+    }
+    .change-state2 {
+            color: red;
+    }
+    .change-state3 {
+        color: black;
+    }
+</style>
+<script>
+    const init = () => {
+        const link1 = document.getElementById("link1");
+        link1.onmouseup = () => {
+            document.getElementById("p1").className = "change-state1";
+        };
+        link1.onmouseover = () => {
+            document.getElementById("p1").className = "change-state2";
+        };
+        link1.onmouseleave = () => {
+            document.getElementById("p1").className = "change-state3";
+        };
+    };
+    window.addEventListener("load", init, false);
+</script>
+</head>
+<body>
+    <header id="primary-header"></header>
+    <a id="link1" href="#">click me!</a>
+    <h1 id="p1">Greetings!</h1>
+</body>
+</html>
